@@ -99,7 +99,6 @@ export const LazyImage: React.FC<LazyImageProps> = ({
       onError={handleError}
       loading={priority ? 'eager' : 'lazy'}
       decoding="async"
-      fetchPriority={priority ? 'high' : 'auto'}
       {...props}
     />
   );
