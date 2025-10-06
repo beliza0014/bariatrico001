@@ -42,7 +42,7 @@ export const Page01Landing: React.FC<QuizPageProps> = ({
   } = useABExperiments();
 
   // Final headline text (exact specification)
-  const finalHeadlineText = "Descubra o ritual de chá de 3 minutos para secar 8kg em apenas 1 mês — sem dieta ou esforço.";
+  const finalHeadlineText = "Descubra o ritual de chá de 3 minutos para derreter 8kg em apenas 1 mês";
 
   // Use custom CTA text
   const finalCTAText = "Quero a receita!";
