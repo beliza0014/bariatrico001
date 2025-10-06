@@ -7,9 +7,9 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   define: {
-    'import.meta.env.VITE_SUPABASE_URL': JSON.stringify(process.env.VITE_SUPABASE_URL || 'https://tuxxwwkgddarcddyujou.supabase.co'),
-    'import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY': JSON.stringify(process.env.VITE_SUPABASE_PUBLISHABLE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR1eHh3d2tnZGRhcmNkZHl1am91Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk3NjMzOTEsImV4cCI6MjA3NTMzOTM5MX0.vquDvdWOQ8qPD4d_R_y55qLKrIu4bfez4SEvdKDvdxA'),
-    'import.meta.env.VITE_SUPABASE_PROJECT_ID': JSON.stringify(process.env.VITE_SUPABASE_PROJECT_ID || 'tuxxwwkgddarcddyujou'),
+    'import.meta.env.VITE_SUPABASE_URL': JSON.stringify(process.env.VITE_SUPABASE_URL || 'https://mvzqxxjmdxzghrholygv.supabase.co'),
+    'import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY': JSON.stringify(process.env.VITE_SUPABASE_PUBLISHABLE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im12enF4eGptZHh6Z2hyaG9seWd2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk3NjU1MjIsImV4cCI6MjA3NTM0MTUyMn0.hDV9Qsbj9Ql7hV_Oa7VE-SsnUbZYLV2Resi_bHj3OAU'),
+    'import.meta.env.VITE_SUPABASE_PROJECT_ID': JSON.stringify(process.env.VITE_SUPABASE_PROJECT_ID || 'mvzqxxjmdxzghrholygv'),
   },
   server: {
     host: "::",
