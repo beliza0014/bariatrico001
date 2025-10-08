@@ -170,7 +170,7 @@ export const Page13TestimonialNew: React.FC<QuizPageProps> = ({
         <div className="max-w-md mx-auto">
           <Button onClick={handleContinue} variant="emerald" size="betterme" className="w-full text-lg font-semibold py-4 shadow-2xl transform hover:scale-105 transition-all duration-200" aria-label="Continuar para próxima etapa">
             <span className="flex items-center justify-center">
-              Quero minha transformação
+              QUERO MEU RESULTADO
             </span>
           </Button>
         </div>
