@@ -320,7 +320,7 @@ export const Page23FruitPreferences: React.FC<QuizPageProps> = ({
         <div className="space-y-2">
             <Button onClick={handleContinue} disabled={!canContinue} variant="emerald" size="betterme" className="w-full" aria-live="polite" aria-describedby="p20-counter" aria-label={`${ctaText} com ${selectedOptions.length} de 4 frutas selecionadas`}>
               <Star className="w-5 h-5 mr-2" />
-              {ctaText} ({selectedOptions.length}/4)
+              {ctaText}
             </Button>
           
           {/* Microcopy */}
