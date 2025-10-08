@@ -297,7 +297,7 @@ export const Page16ObjecoesCondicionais: React.FC<QuizPageProps> = ({
           {/* CTA Button */}
           <div className="space-y-3">
             <Button ref={ctaRef} onClick={handleContinue} variant="emerald" size="betterme" className="w-full text-base font-bold py-4 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-200">
-              VER MINHA SOLUÇÃO PERSONALIZADA
+              CONTINUAR
             </Button>
             
             {/* Microcopy */}
