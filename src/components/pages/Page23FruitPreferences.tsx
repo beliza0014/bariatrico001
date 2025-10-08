@@ -231,7 +231,7 @@ export const Page23FruitPreferences: React.FC<QuizPageProps> = ({
     }, 100);
   };
   const canContinue = selectedOptions.length >= 2 && selectedOptions.length <= 4;
-  const ctaText = ctaVariant === 'variant' ? 'CONFIRMAR SABORES' : 'PERSONALIZAR SABORES';
+  const ctaText = 'CONTINUAR';
   return <ProfessionalQuizLayout>
       <div className="animate-fade-in space-y-6">
         {/* Accessible Selection Counter */}
