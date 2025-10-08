@@ -108,7 +108,7 @@ export const Page18FaceTransformation: React.FC<QuizPageProps> = ({
           <div className="relative inline-block">
             <Button onClick={handleContinue} variant="emerald" size="betterme" className="w-full max-w-xs mx-auto relative overflow-hidden group shadow-xl hover:shadow-2xl transition-all duration-300 px-6 py-4">
               <span className="relative z-10 flex items-center justify-center text-sm font-semibold">
-                VER MINHA TRANSFORMAÇÃO COMPLETA
+                QUERO ESSE RESULTADO
               </span>
               {/* Animated background effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 via-green-500 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
