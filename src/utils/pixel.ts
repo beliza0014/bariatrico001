@@ -76,6 +76,7 @@ export function initMetaPixel(): void {
   })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
 
   (window as any).fbq('init', PIXEL_ID);
+  (window as any).fbq('set', 'autoConfig', false, PIXEL_ID);
   (window as any).fbq('track', 'PageView');
   console.log(`📊 Meta Pixel inicializado com ID: ${PIXEL_ID}`);
 }
