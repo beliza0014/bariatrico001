@@ -9,7 +9,7 @@ import { QuizPageProps } from '@/types/quiz';
 import { SocialBadges } from '@/components/ui/SocialBadges';
 import { SocialProofCarousel } from '@/components/ui/SocialProofCarousel';
 import { GLOBAL_CONSTANTS, TRACKING_EVENTS } from '@/config/globalConstants';
-import { trackPixelPurchase } from '@/utils/pixelTracking';
+import { trackPurchase } from '@/utils/pixel';
 
 export const Page27ThankYou: React.FC<QuizPageProps> = ({ audio = {} }) => {
   useQuizStep('Obrigado');
@@ -31,7 +31,13 @@ export const Page27ThankYou: React.FC<QuizPageProps> = ({ audio = {} }) => {
 
     // Meta Pixel - Purchase event (apenas se compra foi confirmada)
     if (purchaseCompleted) {
-      trackPixelPurchase();
+      trackPurchase({
+        value: 37.9,
+        currency: 'BRL',
+        content_name: 'Chá Bariátrico - Receita Personalizada',
+        contents: [{ id: 'cha-bariatrico', quantity: 1 }],
+        num_items: 1,
+      });
     }
 
     if (typeof window !== 'undefined' && (window as any).gtag) {

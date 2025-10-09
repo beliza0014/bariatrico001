@@ -15,7 +15,7 @@ import { SocialProofCarousel } from '@/components/ui/SocialProofCarousel';
 import { GLOBAL_CONSTANTS } from '@/config/globalConstants';
 import { EnhancedCTACard } from '@/components/ui/EnhancedCTACard';
 import { useOptimizedImageCache } from '@/hooks/useOptimizedImageCache';
-import { trackPixelInitiateCheckout } from '@/utils/pixelTracking';
+import { trackInitiateCheckout } from '@/utils/pixel';
 import { InterstitialQuestion } from '@/components/ui/Interstitial';
 
 // Enhanced types for barrier and goal mapping
@@ -250,7 +250,12 @@ export const Page26Checkout: React.FC<QuizPageProps> = ({
   // CTA handler - IMMEDIATE REDIRECT TO KIWIFY
   const handleContinue = () => {
     // Fire tracking events asynchronously (non-blocking)
-    trackPixelInitiateCheckout();
+    trackInitiateCheckout({
+      value: 37.9,
+      currency: 'BRL',
+      contents: [{ id: 'cha-bariatrico', quantity: 1 }],
+      num_items: 1,
+    });
     trackEvent('p26_liberar_acesso_click', {
       value: 37.90,
       currency: 'BRL',

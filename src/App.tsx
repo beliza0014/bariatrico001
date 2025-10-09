@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -6,14 +7,21 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { SoundProvider } from "@/contexts/SoundContext";
 import { QuizProvider } from "@/contexts/QuizContext";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
+import { initMetaPixel, ensureFbcFromFbclid } from "@/utils/pixel";
 
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <ErrorBoundary>
+const App = () => {
+  useEffect(() => {
+    initMetaPixel();
+    ensureFbcFromFbclid();
+  }, []);
+
+  return (
+    <ErrorBoundary>
     <QueryClientProvider client={queryClient}>
       <QuizProvider>
         <SoundProvider>
@@ -37,6 +45,7 @@ const App = () => (
       </QuizProvider>
     </QueryClientProvider>
   </ErrorBoundary>
-);
+  );
+};
 
 export default App;
