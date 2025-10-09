@@ -8,7 +8,6 @@ import { Input } from '@/components/ui/input';
 import { Phone, Mail, CheckCircle2 } from 'lucide-react';
 import { z } from 'zod';
 import { supabase } from '@/integrations/supabase/client';
-import { trackPixelContact } from '@/utils/pixelTracking';
 
 // Validation schemas - aceita números com ou sem +
 const whatsappSchema = z.string().trim().regex(/^\+?[0-9]{10,15}$/, 'Digite apenas números').min(10, 'Mínimo 10 dígitos').max(15, 'Máximo 15 dígitos');
@@ -93,8 +92,6 @@ export const Page25bContactCapture: React.FC<QuizPageProps> = ({
         setSavedToCloud(true);
       }
 
-      // Meta Pixel - Contact event com eventID
-      trackPixelContact(isWhatsApp ? 'WhatsApp' : 'Email');
       audio.onSelect?.();
       audio.onNext?.();
 
